@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		930092E71B7ACFD20008206C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930092E61B7ACFD20008206C /* AppDelegate.swift */; };
-		930092E91B7ACFD20008206C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930092E81B7ACFD20008206C /* ViewController.swift */; };
 		930092EC1B7ACFD20008206C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930092EA1B7ACFD20008206C /* Main.storyboard */; };
 		930092EE1B7ACFD20008206C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930092ED1B7ACFD20008206C /* Images.xcassets */; };
 		930092F11B7ACFD20008206C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930092EF1B7ACFD20008206C /* LaunchScreen.xib */; };
 		930092FD1B7ACFD20008206C /* OpenHackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930092FC1B7ACFD20008206C /* OpenHackathonTests.swift */; };
+		930093071B7AD12E0008206C /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093061B7AD12E0008206C /* TabsViewController.swift */; };
+		930093091B7BF3C20008206C /* OHColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093081B7BF3C20008206C /* OHColor.swift */; };
+		9300930B1B7BF5B20008206C /* HackWesternColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300930A1B7BF5B20008206C /* HackWesternColor.swift */; };
+		9300930E1B7BFECE0008206C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300930D1B7BFECE0008206C /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		930092E11B7ACFD20008206C /* OpenHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930092E51B7ACFD20008206C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930092E61B7ACFD20008206C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		930092E81B7ACFD20008206C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		930092EB1B7ACFD20008206C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		930092ED1B7ACFD20008206C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		930092F01B7ACFD20008206C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		930092F61B7ACFD20008206C /* OpenHackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenHackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		930092FB1B7ACFD20008206C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930092FC1B7ACFD20008206C /* OpenHackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHackathonTests.swift; sourceTree = "<group>"; };
+		930093061B7AD12E0008206C /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
+		930093081B7BF3C20008206C /* OHColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHColor.swift; sourceTree = "<group>"; };
+		9300930A1B7BF5B20008206C /* HackWesternColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackWesternColor.swift; sourceTree = "<group>"; };
+		9300930D1B7BFECE0008206C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +83,11 @@
 		930092E31B7ACFD20008206C /* OpenHackathon */ = {
 			isa = PBXGroup;
 			children = (
-				930092E61B7ACFD20008206C /* AppDelegate.swift */,
-				930092E81B7ACFD20008206C /* ViewController.swift */,
+				9300930C1B7BFEBE0008206C /* Home */,
 				930092EA1B7ACFD20008206C /* Main.storyboard */,
-				930092ED1B7ACFD20008206C /* Images.xcassets */,
-				930092EF1B7ACFD20008206C /* LaunchScreen.xib */,
+				930093061B7AD12E0008206C /* TabsViewController.swift */,
+				930093081B7BF3C20008206C /* OHColor.swift */,
+				9300930A1B7BF5B20008206C /* HackWesternColor.swift */,
 				930092E41B7ACFD20008206C /* Supporting Files */,
 			);
 			path = OpenHackathon;
@@ -90,6 +96,9 @@
 		930092E41B7ACFD20008206C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				930092E61B7ACFD20008206C /* AppDelegate.swift */,
+				930092ED1B7ACFD20008206C /* Images.xcassets */,
+				930092EF1B7ACFD20008206C /* LaunchScreen.xib */,
 				930092E51B7ACFD20008206C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +119,14 @@
 				930092FB1B7ACFD20008206C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9300930C1B7BFEBE0008206C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9300930D1B7BFECE0008206C /* HomeViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930092E91B7ACFD20008206C /* ViewController.swift in Sources */,
+				9300930E1B7BFECE0008206C /* HomeViewController.swift in Sources */,
+				930093071B7AD12E0008206C /* TabsViewController.swift in Sources */,
 				930092E71B7ACFD20008206C /* AppDelegate.swift in Sources */,
+				930093091B7BF3C20008206C /* OHColor.swift in Sources */,
+				9300930B1B7BF5B20008206C /* HackWesternColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +431,7 @@
 				930093021B7ACFD20008206C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		930093031B7ACFD20008206C /* Build configuration list for PBXNativeTarget "OpenHackathonTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +440,7 @@
 				930093051B7ACFD20008206C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
