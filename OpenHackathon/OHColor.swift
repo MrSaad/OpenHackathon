@@ -20,4 +20,8 @@ class OHColor: UIColor{
     static var navBarBackgroundColor = HackWesternColor.deepPurple800
     static var navBarTextColor = UIColor.whiteColor()
     
+    //update table view colours
+    static var updateTableViewBackgroundColor = HackWesternColor.grey500
+    static var updateTableViewCardColor = HackWesternColor.deepPurple500
+    
 }
