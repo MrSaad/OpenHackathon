@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //set page controller indicators
         var pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
-        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.darkGrayColor()
         pageControl.backgroundColor = UIColor.whiteColor()
         
         return true

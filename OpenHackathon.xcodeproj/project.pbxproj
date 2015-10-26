@@ -27,6 +27,7 @@
 		93A5555E1B96C4F800F81812 /* SponsorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */; };
 		93A555601B96C56C00F81812 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5555F1B96C56C00F81812 /* Sponsor.swift */; };
 		93A555621B96CDC700F81812 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555611B96CDC700F81812 /* SwiftyJSON.swift */; };
+		93A555641B97BB5600F81812 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsTableViewController.swift; sourceTree = "<group>"; };
 		93A5555F1B96C56C00F81812 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		93A555611B96CDC700F81812 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				934DFF301B8532DB00F93769 /* ScheduleTableViewController.swift */,
+				93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				934DFF331B85339400F93769 /* MapsViewController.swift in Sources */,
 				930093071B7AD12E0008206C /* TabsViewController.swift in Sources */,
 				930092E71B7ACFD20008206C /* AppDelegate.swift in Sources */,
+				93A555641B97BB5600F81812 /* ScheduleTableViewCell.swift in Sources */,
 				93A555621B96CDC700F81812 /* SwiftyJSON.swift in Sources */,
 				93A5555E1B96C4F800F81812 /* SponsorsTableViewController.swift in Sources */,
 				930093091B7BF3C20008206C /* OHColor.swift in Sources */,

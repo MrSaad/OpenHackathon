@@ -9,16 +9,67 @@
         <scene sceneID="sr3-NP-E9O">
             <objects>
                 <tableViewController id="5Bi-eg-NGo" customClass="ScheduleTableViewController" customModule="OpenHackathon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HZW-Vh-2vM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="159" sectionHeaderHeight="10" sectionFooterHeight="10" id="HZW-Vh-2vM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gv3-ph-BJz">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" rowHeight="159" id="Gv3-ph-BJz" customClass="ScheduleTableViewCell" customModule="OpenHackathon" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gv3-ph-BJz" id="KEA-7W-4oR">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7v-6Q-2lu">
+                                            <rect key="frame" x="511" y="22" width="65" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UCC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w84-vN-L5h">
+                                            <rect key="frame" x="26" y="43" width="38" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="cyU-l8-kAq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-Xz-0bW">
+                                            <rect key="frame" x="26" y="74" width="550" height="64"/>
+                                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiL-qg-Qy2">
+                                            <rect key="frame" x="26" y="22" width="44" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="LJa-d7-gJE"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k7v-6Q-2lu" firstAttribute="trailing" secondItem="KEA-7W-4oR" secondAttribute="trailingMargin" constant="-16" id="6ca-b9-IMW"/>
+                                        <constraint firstItem="k7v-6Q-2lu" firstAttribute="top" secondItem="KEA-7W-4oR" secondAttribute="topMargin" constant="14" id="Cs7-zM-2oc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="R3S-Xz-0bW" secondAttribute="trailing" constant="16" id="GC8-Ub-oSm"/>
+                                        <constraint firstItem="kiL-qg-Qy2" firstAttribute="top" secondItem="KEA-7W-4oR" secondAttribute="topMargin" constant="14" id="Paz-nZ-JIa"/>
+                                        <constraint firstItem="w84-vN-L5h" firstAttribute="top" secondItem="kiL-qg-Qy2" secondAttribute="bottom" id="TcO-VB-jUy"/>
+                                        <constraint firstItem="R3S-Xz-0bW" firstAttribute="leading" secondItem="KEA-7W-4oR" secondAttribute="leadingMargin" constant="18" id="iwJ-p0-l0F"/>
+                                        <constraint firstItem="kiL-qg-Qy2" firstAttribute="leading" secondItem="KEA-7W-4oR" secondAttribute="leadingMargin" constant="18" id="mIi-Wk-HuA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="R3S-Xz-0bW" secondAttribute="bottom" constant="13" id="tWQ-Ov-6W6"/>
+                                        <constraint firstItem="R3S-Xz-0bW" firstAttribute="top" secondItem="w84-vN-L5h" secondAttribute="bottom" constant="10" id="uCb-i6-lRf"/>
+                                        <constraint firstItem="w84-vN-L5h" firstAttribute="leading" secondItem="KEA-7W-4oR" secondAttribute="leadingMargin" constant="18" id="zUD-KJ-SFF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infoLabel" destination="R3S-Xz-0bW" id="g1V-2I-nPW"/>
+                                    <outlet property="locationLabel" destination="w84-vN-L5h" id="QPG-oM-llX"/>
+                                    <outlet property="timeLabel" destination="k7v-6Q-2lu" id="jsG-qU-ohe"/>
+                                    <outlet property="titleLabel" destination="kiL-qg-Qy2" id="lMX-db-w1s"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -373,10 +424,10 @@
         <scene sceneID="2vK-LT-pDI">
             <objects>
                 <tableViewController id="JyJ-uc-2Zh" customClass="SponsorsTableViewController" customModule="OpenHackathon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KYh-2W-i1K">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="KYh-2W-i1K">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sponsorCell" id="Rub-Bl-HQg">
                                 <autoresizingMask key="autoresizingMask"/>
