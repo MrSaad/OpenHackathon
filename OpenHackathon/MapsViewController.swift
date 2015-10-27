@@ -31,10 +31,10 @@ class MapsViewController: UIViewController {
         self.pageImages = NSArray(objects: "canada", "map", "maze")
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapsPageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
-        var startVC = self.viewControllerAtIndex(0) as MapsContentViewController
+        let startVC = self.viewControllerAtIndex(0) as MapsContentViewController
         
-        var viewControllers = NSArray(object: startVC)
-        self.pageViewController.setViewControllers(viewControllers as [AnyObject], direction: .Forward, animated: true, completion: nil)
+        let viewControllers = NSArray(object: startVC) as [AnyObject]
+        self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.size.height - 60)
         
         self.addChildViewController(self.pageViewController)
@@ -50,7 +50,7 @@ class MapsViewController: UIViewController {
             return MapsContentViewController()
         }
         
-        var vc: MapsContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapsContentViewController") as! MapsContentViewController
+        let vc: MapsContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapsContentViewController") as! MapsContentViewController
         
         vc.imageFile = self.pageImages[index] as! String
         vc.titleText = self.pageTitles[index] as! String
@@ -70,7 +70,7 @@ extension MapsViewController: UIPageViewControllerDataSource{
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?{
         
-        var vc = viewController as! MapsContentViewController
+        let vc = viewController as! MapsContentViewController
         var index = vc.pageIndex as Int
         
         if (index == 0 || index == NSNotFound){
@@ -83,7 +83,7 @@ extension MapsViewController: UIPageViewControllerDataSource{
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        var vc = viewController as! MapsContentViewController
+        let vc = viewController as! MapsContentViewController
         var index = vc.pageIndex as Int
         
         if (index == NSNotFound){

@@ -9,14 +9,18 @@
 import UIKit
 
 class ScheduleTableViewCell: UITableViewCell {
+    
+    var delegate: ScheduleTableViewController?
 
+    //selected status
+    var addedToSchedule = false
     
     //labels
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
-    
+    @IBOutlet weak var addScheduleButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,12 +39,11 @@ class ScheduleTableViewCell: UITableViewCell {
         infoLabel.font = UIFont(name: "Helvetica", size: 16)
         infoLabel.sizeToFit()
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
     
+    @IBAction func addScheduleButtonSelected(sender: UIButton) {
+        addedToSchedule = !addedToSchedule
+        delegate!.tableView.reloadData()
+    }
     
 
 }

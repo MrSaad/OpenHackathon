@@ -13,6 +13,9 @@ class HomeViewController: UIViewController {
     //labels
     @IBOutlet weak var countdownClock: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var recentUpdatesLabel: UILabel!
+    @IBOutlet weak var recentUpdatesText: UITextView!
+    
     
     //timer
     var timer: NSTimer!
@@ -29,6 +32,9 @@ class HomeViewController: UIViewController {
         //set nav bar title
         self.navigationItem.title = "Home"
         
+        //format background color
+        self.view.backgroundColor = UIColor.blackColor()
+        
         //format countdown clock
         countdownClock.font = UIFont(name: "Helvetica-Light", size: 60)
         //countdown timer updates
@@ -36,30 +42,34 @@ class HomeViewController: UIViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: aSelector, userInfo: nil, repeats: true)
         
         //format time left label
-        timeLeftLabel.textColor = UIColor.darkGrayColor()
+        timeLeftLabel.textColor = UIColor.lightGrayColor()
         timeLeftLabel.font = UIFont(name: "Helvetica", size: 14)
         
-        
+        //format recent updates label
+        recentUpdatesLabel.text = "Recent Updates"
+        recentUpdatesLabel.textColor = UIColor.whiteColor()
+        recentUpdatesText.backgroundColor = UIColor.blackColor()
+        recentUpdatesText.textColor = UIColor.lightGrayColor()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool) {
+        recentUpdatesText.scrollRangeToVisible(NSRange(location:0, length:0))
     }
     
     //update the the countdown timer
     func updateTime(){
         countdownClock.text = HackathonInfo.timeLeft.hrMinSecForm
-        countdownClock.textColor = OHColor.tabBarBackgroundColor
+//        countdownClock.textColor = OHColor.tabBarBackgroundColor
+        countdownClock.textColor = timeLeftColor()
     }
     
     //adjust colour of timer based on how much time is left
     func timeLeftColor() -> UIColor{
-        let timeLeft = HackathonInfo.timeLeft.timeInSeconds
+        let timeLeft = HackathonInfo.timeLeft.time
         
         var myRed: CGFloat = 0
         var myGreen: CGFloat = 0
-        var myBlue: CGFloat = 0
+        let myBlue: CGFloat = 0
         
         //keep green if over 36 hours
         if timeLeft > 36 * 3600{

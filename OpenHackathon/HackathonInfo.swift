@@ -11,9 +11,9 @@ import Foundation
 struct HackathonInfo{
     
     //time that hackathon ends
-    static let endTimeStr = "09/03/2015 12:15:00"
+    static let endTimeStr = "10/29/2015 12:15:00"
     static var endTime: NSDate!{
-        var formatter = NSDateFormatter()
+        let formatter = NSDateFormatter()
         formatter.dateFormat = "MM/dd/yyyy HH:mm:ss"
         return formatter.dateFromString(endTimeStr)
     }

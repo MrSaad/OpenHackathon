@@ -44,10 +44,27 @@ class ScheduleTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
+        
+        //set cell delegate
+        cell.delegate = self
+        
+        //set cell color
         if indexPath.row % 2 == 0{cell.backgroundColor = OHColor.scheduleTableViewCellBackground1}
         else{cell.backgroundColor = OHColor.scheduleTableVViewCellBackground2}
+        
+        //set cell text properties
+        cell.tag = indexPath.section*100 + indexPath.row
+        
+        if(!cell.addedToSchedule){
+            cell.addScheduleButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+            cell.addScheduleButton.setTitle("+ Add to Schedule", forState: .Normal)
+        }
+        else{
+            cell.addScheduleButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
+            cell.addScheduleButton.setTitle("+ Remove From Schedule", forState: .Normal)
+        }
+        
 
         return cell
     }
