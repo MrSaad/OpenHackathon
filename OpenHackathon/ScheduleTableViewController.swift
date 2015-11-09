@@ -10,10 +10,20 @@ import UIKit
 
 class ScheduleTableViewController: UITableViewController {
     
+    //menu
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     let days = ["Friday", "Saturday", "Sunday"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set menu toggle
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
         //format nav bar colour
         self.navigationController?.navigationBar.barTintColor = OHColor.navBarBackgroundColor

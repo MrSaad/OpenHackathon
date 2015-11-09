@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SponsorsTableViewController: UITableViewController {
     
-    let sponsorTypes = ["Gold Sponsors", "Silver Sponsors", "Bronze Sponsors"]
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    let sponsorTitles = ["Gold Sponsors", "Silver Sponsors", "Bronze Sponsors"]
+    let sponsorTypes = ["gold", "silver", "bronze"]
+    var sponsors: JSON!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set menu toggle
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
         //format nav bar colour
         self.navigationController?.navigationBar.barTintColor = OHColor.navBarBackgroundColor
@@ -24,12 +36,21 @@ class SponsorsTableViewController: UITableViewController {
         //set nav bar title
         self.navigationItem.title = "Sponsors"
         
+        //*** TESTING ***
+        if let path = NSBundle.mainBundle().pathForResource("SponsorData", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                let json = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
+                sponsors = json["sponsors"]
+            }
+        }
+        
+        print(sponsors["gold"][0])
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
         return sponsorTypes.count
     }
 
@@ -47,7 +68,7 @@ class SponsorsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sponsorTypes[section]
+        return sponsorTitles[section]
     }
     
 

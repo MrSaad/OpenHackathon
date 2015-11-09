@@ -10,12 +10,22 @@ import UIKit
 
 class MapsViewController: UIViewController {
 
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
     var pageImages: NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set menu toggle
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
         //format nav bar colour
         self.navigationController?.navigationBar.barTintColor = OHColor.navBarBackgroundColor

@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
-
+    
+    //menu
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     //labels
     @IBOutlet weak var countdownClock: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
@@ -22,6 +27,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set menu toggle
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
         //format nav bar colour
         self.navigationController?.navigationBar.barTintColor = OHColor.navBarBackgroundColor
@@ -30,7 +42,7 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = OHColor.navBarTextColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : OHColor.navBarTextColor]
         //set nav bar title
-        self.navigationItem.title = "Home"
+        self.navigationItem.title = "HackWestern 2015"
         
         //format background color
         self.view.backgroundColor = UIColor.blackColor()
@@ -50,6 +62,9 @@ class HomeViewController: UIViewController {
         recentUpdatesLabel.textColor = UIColor.whiteColor()
         recentUpdatesText.backgroundColor = UIColor.blackColor()
         recentUpdatesText.textColor = UIColor.lightGrayColor()
+        
+        //*** TESTING ***
+        
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -58,13 +73,14 @@ class HomeViewController: UIViewController {
     
     //update the the countdown timer
     func updateTime(){
-        countdownClock.text = HackathonInfo.timeLeft.hrMinSecForm
-//        countdownClock.textColor = OHColor.tabBarBackgroundColor
+        if(HackathonInfo.timeLeft.time <= 0){ countdownClock.text = "00:00:00" }
+        else{ countdownClock.text = HackathonInfo.timeLeft.hrMinSecForm }
         countdownClock.textColor = timeLeftColor()
     }
     
     //adjust colour of timer based on how much time is left
     func timeLeftColor() -> UIColor{
+        
         let timeLeft = HackathonInfo.timeLeft.time
         
         var myRed: CGFloat = 0
@@ -82,7 +98,7 @@ class HomeViewController: UIViewController {
             myGreen = 1
         }
         //change from yellow to red in second half
-        else if timeLeft <= 18 * 3600{
+        else if timeLeft <= 18 * 3600 && timeLeft > 0{
             myGreen = 1 - CGFloat(timeLeft/(18*3600))
             myRed = 1
         }

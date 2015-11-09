@@ -1,0 +1,31 @@
+{
+    "sponsors":{
+        "gold":[
+            {
+                "name": "sponsor1",
+                "logo": "kik",
+                "info": "some info"
+            },
+            {
+                "name": "sponsor2",
+                "logo": "kik",
+                "info": "some info"
+            }
+                
+        ],
+        "silver":[
+            {
+                "name": "sponsor1",
+                "logo": "kik",
+                "info": "some info"
+            },
+        ],
+        "bronze":[
+            {
+                "name": "sponsor1",
+                "logo": "kik",
+                "info": "some info"
+            }
+        ]
+    }
+}

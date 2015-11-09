@@ -11,12 +11,12 @@ import UIKit
 
 class OHColor: UIColor{
     
-    //tab bar colours
-    static var tabBarBackgroundColor = HackWesternColor.deepPurple800
-    static var tabBarItemNormalColor = HackWesternColor.grey500
-    static var tabBarItemSelectedColor = UIColor.whiteColor()
+    // MARK: - Menu 
+    static var menuCellSelectedColor = HackWesternColor.deepPurple400
+    static var menuCellUnselectedColor = UIColor(white: 0.5, alpha: 1)
     
-    //navigation bar colours
+    
+    // MARK: - Navigation Bar
     static var navBarBackgroundColor = HackWesternColor.deepPurple800
     static var navBarTextColor = UIColor.whiteColor()
     

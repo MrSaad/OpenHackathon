@@ -10,8 +10,20 @@ import UIKit
 
 class UpdatesTableViewController: UITableViewController {
 
+    //menu
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    var updates: [Update]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set menu toggle
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
         //format nav bar colour
         self.navigationController?.navigationBar.barTintColor = OHColor.navBarBackgroundColor
