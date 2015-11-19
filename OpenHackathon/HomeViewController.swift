@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
         //countdown timer updates
         let aSelector : Selector = "updateTime"
         timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        
+
         //format time left label
         timeLeftLabel.textColor = UIColor.lightGrayColor()
         timeLeftLabel.font = UIFont(name: "Helvetica", size: 14)
@@ -62,8 +62,6 @@ class HomeViewController: UIViewController {
         recentUpdatesLabel.textColor = UIColor.whiteColor()
         recentUpdatesText.backgroundColor = UIColor.blackColor()
         recentUpdatesText.textColor = UIColor.lightGrayColor()
-        
-        //*** TESTING ***
         
     }
 
@@ -94,12 +92,12 @@ class HomeViewController: UIViewController {
         }
         //change from green to yellow in first half
         else if timeLeft <= 36 * 3600 && timeLeft > 18 * 3600{
-            myRed = CGFloat((timeLeft-18*3600)/(18*3600))
+            myRed = 1 - CGFloat((timeLeft-18*3600)/(18*3600))
             myGreen = 1
         }
         //change from yellow to red in second half
         else if timeLeft <= 18 * 3600 && timeLeft > 0{
-            myGreen = 1 - CGFloat(timeLeft/(18*3600))
+            myGreen = CGFloat(timeLeft/(18*3600))
             myRed = 1
         }
         //keep red if less than 0
@@ -109,6 +107,20 @@ class HomeViewController: UIViewController {
         }
         
         return UIColor(red: myRed, green: myGreen, blue: myBlue, alpha: 1)
+    }
+    
+    func addReminder() {
+        // Create reminder by setting a local notification
+        let localNotification = UILocalNotification()
+        localNotification.alertTitle = "HackWestern Reminder"
+        localNotification.alertBody = "do tha thing!"
+        localNotification.alertAction = "ShowDetails"
+        localNotification.fireDate = NSDate().dateByAddingTimeInterval(10)
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        localNotification.applicationIconBadgeNumber = 1
+        localNotification.category = "reminderCategory"
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
 
 }

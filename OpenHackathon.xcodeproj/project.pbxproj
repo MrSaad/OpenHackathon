@@ -13,16 +13,19 @@
 		930092EE1B7ACFD20008206C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930092ED1B7ACFD20008206C /* Images.xcassets */; };
 		930092F11B7ACFD20008206C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930092EF1B7ACFD20008206C /* LaunchScreen.xib */; };
 		930092FD1B7ACFD20008206C /* OpenHackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930092FC1B7ACFD20008206C /* OpenHackathonTests.swift */; };
-		930093071B7AD12E0008206C /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093061B7AD12E0008206C /* TabsViewController.swift */; };
 		930093091B7BF3C20008206C /* OHColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930093081B7BF3C20008206C /* OHColor.swift */; };
 		9300930B1B7BF5B20008206C /* HackWesternColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300930A1B7BF5B20008206C /* HackWesternColor.swift */; };
 		9300930E1B7BFECE0008206C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300930D1B7BFECE0008206C /* HomeViewController.swift */; };
+		931AF5CB1BF05257002606F6 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AF5CA1BF05257002606F6 /* ScheduleItem.swift */; };
+		931AF5CD1BF088D5002606F6 /* schedule_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 931AF5CC1BF088D5002606F6 /* schedule_info.json */; };
+		931AF5CF1BF177D7002606F6 /* notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = 931AF5CE1BF177D7002606F6 /* notifications.json */; };
 		9347E9F71BEF415A007213F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347E9F61BEF415A007213F0 /* SWRevealViewController.m */; };
 		9347E9F91BEF42F4007213F0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347E9F81BEF42F4007213F0 /* MenuTableViewController.swift */; };
 		9347E9FC1BF01BD9007213F0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347E9FB1BF01BD9007213F0 /* MenuTableViewCell.swift */; };
 		934DFF311B8532DB00F93769 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934DFF301B8532DB00F93769 /* ScheduleTableViewController.swift */; };
 		934DFF331B85339400F93769 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934DFF321B85339400F93769 /* MapsViewController.swift */; };
 		934DFF351B8533A700F93769 /* UpdatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934DFF341B8533A700F93769 /* UpdatesTableViewController.swift */; };
+		9350A6F71BFD5A4F00F6945C /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350A6F61BFD5A4F00F6945C /* UpdateViewController.swift */; };
 		935A55041BDEF37200A123DD /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935A55031BDEF37200A123DD /* SponsorTableViewCell.swift */; };
 		935A55061BDF374300A123DD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935A55051BDF374300A123DD /* Bolts.framework */; };
 		935A55081BDF374F00A123DD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935A55071BDF374F00A123DD /* Parse.framework */; };
@@ -68,10 +71,12 @@
 		930092F61B7ACFD20008206C /* OpenHackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenHackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		930092FB1B7ACFD20008206C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930092FC1B7ACFD20008206C /* OpenHackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenHackathonTests.swift; sourceTree = "<group>"; };
-		930093061B7AD12E0008206C /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		930093081B7BF3C20008206C /* OHColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHColor.swift; sourceTree = "<group>"; };
 		9300930A1B7BF5B20008206C /* HackWesternColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackWesternColor.swift; sourceTree = "<group>"; };
 		9300930D1B7BFECE0008206C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		931AF5CA1BF05257002606F6 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		931AF5CC1BF088D5002606F6 /* schedule_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schedule_info.json; sourceTree = "<group>"; };
+		931AF5CE1BF177D7002606F6 /* notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notifications.json; sourceTree = "<group>"; };
 		9347E9F41BEF415A007213F0 /* OpenHackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenHackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		9347E9F51BEF415A007213F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9347E9F61BEF415A007213F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 		934DFF301B8532DB00F93769 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		934DFF321B85339400F93769 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		934DFF341B8533A700F93769 /* UpdatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewController.swift; sourceTree = "<group>"; };
+		9350A6F61BFD5A4F00F6945C /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		935A55031BDEF37200A123DD /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
 		935A55051BDF374300A123DD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		935A55071BDF374F00A123DD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -169,7 +175,7 @@
 		930092E31B7ACFD20008206C /* OpenHackathon */ = {
 			isa = PBXGroup;
 			children = (
-				9347E9F31BEF414C007213F0 /* SWRevealViewController */,
+				931AF5C91BF05157002606F6 /* Libraries */,
 				9347E9FA1BF01B84007213F0 /* Menu */,
 				9300930C1B7BFEBE0008206C /* Home */,
 				934DFF2C1B85327600F93769 /* Schedule */,
@@ -177,13 +183,11 @@
 				934DFF2E1B85328800F93769 /* Maps */,
 				934DFF2F1B85328F00F93769 /* Sponsors */,
 				930092EA1B7ACFD20008206C /* Main.storyboard */,
-				935A55031BDEF37200A123DD /* SponsorTableViewCell.swift */,
 				930093081B7BF3C20008206C /* OHColor.swift */,
 				93A5555B1B96978C00F81812 /* OHTime.swift */,
 				9300930A1B7BF5B20008206C /* HackWesternColor.swift */,
 				93A555571B9696E800F81812 /* HackathonInfo.swift */,
 				930092E41B7ACFD20008206C /* Supporting Files */,
-				931AF5C61BF02D17002606F6 /* Defunct Classes */,
 			);
 			path = OpenHackathon;
 			sourceTree = "<group>";
@@ -224,12 +228,12 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
-		931AF5C61BF02D17002606F6 /* Defunct Classes */ = {
+		931AF5C91BF05157002606F6 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				930093061B7AD12E0008206C /* TabsViewController.swift */,
+				9347E9F31BEF414C007213F0 /* SWRevealViewController */,
 			);
-			name = "Defunct Classes";
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		9347E9F31BEF414C007213F0 /* SWRevealViewController */ = {
@@ -256,6 +260,9 @@
 			children = (
 				934DFF301B8532DB00F93769 /* ScheduleTableViewController.swift */,
 				93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */,
+				931AF5CA1BF05257002606F6 /* ScheduleItem.swift */,
+				931AF5CC1BF088D5002606F6 /* schedule_info.json */,
+				931AF5CE1BF177D7002606F6 /* notifications.json */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -266,6 +273,7 @@
 				934DFF341B8533A700F93769 /* UpdatesTableViewController.swift */,
 				93A555511B96711A00F81812 /* UpdateTableViewCell.swift */,
 				93A555531B96714900F81812 /* Update.swift */,
+				9350A6F61BFD5A4F00F6945C /* UpdateViewController.swift */,
 			);
 			name = Updates;
 			sourceTree = "<group>";
@@ -283,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */,
+				935A55031BDEF37200A123DD /* SponsorTableViewCell.swift */,
 				93A5555F1B96C56C00F81812 /* Sponsor.swift */,
 				939E63291BE2E42E00E52D9D /* SponsorData.json */,
 			);
@@ -396,6 +405,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				939E632B1BE2E65100E52D9D /* SponsorData.json in Resources */,
+				931AF5CD1BF088D5002606F6 /* schedule_info.json in Resources */,
+				931AF5CF1BF177D7002606F6 /* notifications.json in Resources */,
 				930092EC1B7ACFD20008206C /* Main.storyboard in Resources */,
 				930092F11B7ACFD20008206C /* LaunchScreen.xib in Resources */,
 				930092EE1B7ACFD20008206C /* Images.xcassets in Resources */,
@@ -467,6 +478,7 @@
 				93A555601B96C56C00F81812 /* Sponsor.swift in Sources */,
 				934DFF351B8533A700F93769 /* UpdatesTableViewController.swift in Sources */,
 				93A5555C1B96978C00F81812 /* OHTime.swift in Sources */,
+				931AF5CB1BF05257002606F6 /* ScheduleItem.swift in Sources */,
 				9347E9F91BEF42F4007213F0 /* MenuTableViewController.swift in Sources */,
 				93A555521B96711A00F81812 /* UpdateTableViewCell.swift in Sources */,
 				93A555561B968D6000F81812 /* MapsContentViewController.swift in Sources */,
@@ -474,8 +486,8 @@
 				93A555541B96714900F81812 /* Update.swift in Sources */,
 				934DFF311B8532DB00F93769 /* ScheduleTableViewController.swift in Sources */,
 				9300930E1B7BFECE0008206C /* HomeViewController.swift in Sources */,
+				9350A6F71BFD5A4F00F6945C /* UpdateViewController.swift in Sources */,
 				934DFF331B85339400F93769 /* MapsViewController.swift in Sources */,
-				930093071B7AD12E0008206C /* TabsViewController.swift in Sources */,
 				935A55041BDEF37200A123DD /* SponsorTableViewCell.swift in Sources */,
 				930092E71B7ACFD20008206C /* AppDelegate.swift in Sources */,
 				9347E9FC1BF01BD9007213F0 /* MenuTableViewCell.swift in Sources */,

@@ -20,7 +20,7 @@ class SponsorsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set menu toggle
+        //set toggle menu button
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -47,29 +47,37 @@ class SponsorsTableViewController: UITableViewController {
         print(sponsors["gold"][0])
         
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension SponsorsTableViewController{
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sponsorTypes.count
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("sponsorCell", forIndexPath: indexPath) as! SponsorTableViewCell
-
         
-
+        //fill in stuff here
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sponsorTitles[section]
     }
-    
+}
 
+// MARK: - Table View Delegate
+extension SponsorsTableViewController{
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+    }
 }

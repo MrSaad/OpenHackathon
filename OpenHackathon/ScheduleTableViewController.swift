@@ -13,7 +13,8 @@ class ScheduleTableViewController: UITableViewController {
     //menu
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    let days = ["Friday", "Saturday", "Sunday"]
+    //possible days
+    let days = ["November 10, 2015", "November 11, 2015", "November 12, 2015"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,11 @@ class ScheduleTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : OHColor.navBarTextColor]
         //format nav bar title
         self.navigationItem.title = "Schedule"
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+//        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1), atScrollPosition: .Top, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,8 +54,7 @@ class ScheduleTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return 3
+        return scheduleJSON["schedule"][days[section]].count
     }
 
     
@@ -63,16 +68,28 @@ class ScheduleTableViewController: UITableViewController {
         if indexPath.row % 2 == 0{cell.backgroundColor = OHColor.scheduleTableViewCellBackground1}
         else{cell.backgroundColor = OHColor.scheduleTableVViewCellBackground2}
         
-        //set cell text properties
-        cell.tag = indexPath.section*100 + indexPath.row
+        //set cell tag
+        cell.tag = indexPath.row
         
-        if(!cell.addedToSchedule){
+        //get schedule item
+        let schedItem = scheduleJSON["schedule"][days[indexPath.section]][indexPath.row]
+                
+        //get date for schedule item
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy hh:mm aa"
+        let date = dateFormatter.dateFromString(days[indexPath.section]+" "+schedItem["time"].stringValue)!
+        
+        //set cell's sched item
+        cell.scheduleItem = ScheduleItem(title: schedItem["title"].stringValue, info: schedItem["info"].stringValue, date: date, location: schedItem["location"].stringValue, toNotify: notifDict[schedItem["title"].stringValue]!)
+        cell.populate()
+        
+        if(cell.scheduleItem.toNotify == false){
             cell.addScheduleButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
-            cell.addScheduleButton.setTitle("+ Add to Schedule", forState: .Normal)
+            cell.addScheduleButton.setTitle("+ Remind Me", forState: .Normal)
         }
         else{
             cell.addScheduleButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-            cell.addScheduleButton.setTitle("+ Remove From Schedule", forState: .Normal)
+            cell.addScheduleButton.setTitle("+ Remove From Reminders", forState: .Normal)
         }
         
 

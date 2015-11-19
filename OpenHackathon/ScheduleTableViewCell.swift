@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ScheduleTableViewCell: UITableViewCell {
     
     var delegate: ScheduleTableViewController?
 
-    //selected status
-    var addedToSchedule = false
+    //the schedule item
+    var scheduleItem: ScheduleItem!
+    
+    var toNotify = false
     
     //labels
     @IBOutlet weak var titleLabel: UILabel!
@@ -38,10 +41,52 @@ class ScheduleTableViewCell: UITableViewCell {
         infoLabel.textColor = UIColor.blackColor()
         infoLabel.font = UIFont(name: "Helvetica", size: 16)
         infoLabel.sizeToFit()
+        
+    }
+    
+    func populate(){
+        
+        //format for time
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.timeStyle = .ShortStyle
+        
+        //populate fields
+        titleLabel.text = scheduleItem.title
+        locationLabel.text = scheduleItem.location
+        timeLabel.text = dateFormatter.stringFromDate(scheduleItem.date)
+        infoLabel.text = scheduleItem.info
     }
     
     @IBAction func addScheduleButtonSelected(sender: UIButton) {
-        addedToSchedule = !addedToSchedule
+        
+        //if no reminder has been set, then create a reminder
+        if(scheduleItem.toNotify == false){
+            scheduleItem.localNotification.fireDate = NSDate().dateByAddingTimeInterval(7)
+            UIApplication.sharedApplication().scheduleLocalNotification((scheduleItem.localNotification)!)
+            scheduleItem.toNotify = true
+            notifDict[scheduleItem.title!] = true
+        }
+        
+        //otherwise remove the reminder
+        else{
+            let uidtodelete = scheduleItem.title
+            
+            let app:UIApplication = UIApplication.sharedApplication()
+            for oneEvent in app.scheduledLocalNotifications! {
+                let notification = oneEvent as UILocalNotification
+                let userInfoCurrent = notification.userInfo as! [String:AnyObject]
+                let uid = userInfoCurrent["uid"] as! String
+                if uid == uidtodelete {
+                    //Cancelling local notification
+                    app.cancelLocalNotification(notification)
+                    break;
+                }
+            }
+            
+            scheduleItem.toNotify = false
+            notifDict[scheduleItem.title!] = false
+        }
+
         delegate!.tableView.reloadData()
     }
     

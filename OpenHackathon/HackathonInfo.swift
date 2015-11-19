@@ -15,7 +15,7 @@ enum Page: Int{
 struct HackathonInfo{
     
     //time that hackathon ends
-    static let endTimeStr = "11/10/2015 12:15:00"
+    static let endTimeStr = "11/10/2015 14:25:00"
     static var endTime: NSDate!{
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MM/dd/yyyy HH:mm:ss"

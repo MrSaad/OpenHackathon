@@ -8,14 +8,55 @@
 
 import UIKit
 import Parse
+import SwiftyJSON
+
+var scheduleJSON: JSON!
+var notifJSON: JSON!
+var notifDict = [String: Bool]()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(nil, forKey: "schedule_stored_data")
+        defaults.setObject(nil, forKey: "notif_stored_data")
+        if(defaults.objectForKey("schedule_stored_data") == nil){
+            
+            //load schedule
+            var path = NSBundle.mainBundle().pathForResource("schedule_info", ofType: "json")!
+            var data = NSData(contentsOfFile: path)!
+            scheduleJSON = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
+            defaults.setObject(scheduleJSON.rawString()!, forKey: "schedule_stored_data")
+            
+            //load notifications
+            path = NSBundle.mainBundle().pathForResource("notifications", ofType: "json")!
+            data = NSData(contentsOfFile: path)!
+            notifJSON = JSON(data: data)
+            defaults.setObject(notifJSON.rawString()!, forKey: "notif_stored_data")
+            
+            for (key, object) in notifJSON {
+                notifDict[key] = object.boolValue
+            }
+        }
+        else{
+            
+            //load schedule
+            var str = defaults.objectForKey("schedule_stored_data")
+            var dataFromStr = str!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+            scheduleJSON = JSON(data: dataFromStr)
+            
+            //load notifations
+            str = defaults.objectForKey("notif_stored_data")
+            dataFromStr = str!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+            notifJSON = JSON(data: dataFromStr)
+            notifDict = notifJSON.dictionaryObject as! [String: Bool]
+            
+        }
+    
         
         Parse.setApplicationId("mboI7L7M7uPlSSdCBUPDCWQC3NLqDORPyPQyuOWE",
             clientKey: "5jPMH4NIUhGQUCGS4XTRl3h8Fh2PKj3TBSMltteG")
@@ -31,13 +72,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var pushPayload = false
             if let options = launchOptions {
                 pushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil
+                // Check if there are any local notification objects.
+                if let notification = (options as NSDictionary).objectForKey("UIApplicationLaunchOptionsLocalNotificationKey") as? UILocalNotification {
+                    // Handle the notification action on opening. Like updating a table or showing an alert.
+                    UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK").show()
+                }
             }
             if (preBackgroundPush || oldPushHandlerOnly || pushPayload) {
                 PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             }
         }
         if application.respondsToSelector("registerUserNotificationSettings:") {
-            let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+            
+            let eventReminderCategory = UIMutableUserNotificationCategory()
+            eventReminderCategory.identifier = "reminderCategory"
+            
+            let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: Set(arrayLiteral: eventReminderCategory))
             UIApplication.sharedApplication().registerUserNotificationSettings(settings)
             UIApplication.sharedApplication().registerForRemoteNotifications()
         } else {
@@ -46,9 +96,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //set push notifications
-        //let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-        //UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-        //UIApplication.sharedApplication().registerForRemoteNotifications()
+//        let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+//        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+//        UIApplication.sharedApplication().registerForRemoteNotifications()
         
         //set page controller indicators
         let pageControl = UIPageControl.appearance()
@@ -57,6 +107,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControl.backgroundColor = UIColor.whiteColor()
         
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        // Point for handling the local notification when the app is open.
+        // Showing reminder details in an alertview
+        UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK").show()
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        // Point for handling the local notification Action. Provided alongside creating the notification.
+        if identifier == "ShowDetails" {
+            // Showing reminder details in an alertview
+            UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK").show()
+        }
     }
 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
