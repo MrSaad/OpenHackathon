@@ -43,7 +43,7 @@ class UpdateViewController: UIViewController {
     
     //reloads page content
     func reloadPage(){
-        let url = NSURL (string: "http://localhost:3000/updates");
+        let url = NSURL (string: "https://hackwestern.com/updates");
         let requestObj = NSURLRequest(URL: url!);
         webView.loadRequest(requestObj);
     }
