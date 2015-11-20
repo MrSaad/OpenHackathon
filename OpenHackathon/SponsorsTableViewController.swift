@@ -36,7 +36,7 @@ class SponsorsTableViewController: UITableViewController {
         //set nav bar title
         self.navigationItem.title = "Sponsors"
         
-        //*** TESTING ***
+        //*** READ JSON ***
         if let path = NSBundle.mainBundle().pathForResource("SponsorData", ofType: "json") {
             if let data = NSData(contentsOfFile: path) {
                 let json = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
@@ -44,6 +44,7 @@ class SponsorsTableViewController: UITableViewController {
             }
         }
         
+        //testing
         print(sponsors["gold"][0])
         
     }
