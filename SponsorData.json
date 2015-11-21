@@ -1,0 +1,192 @@
+{
+    "sponsors":{
+    	"platinum":[
+    		{
+    			"name": "Digital Boundary Group",
+                "logo": "img/sponsors/dbg.png",
+                "info": "some info"
+            }
+        ],
+        "gold":[
+            {
+                "name": "Big Viking Games",
+                "logo": "img/sponsors/bvg.png",
+                "info": "some info"
+            },
+            {
+                "name": "Tech Alliance",
+                "logo": "img/sponsors/techalliance.png",
+                "info": "some info"
+            },
+            {
+                "name": "Info Tech Research Group",
+                "logo": "img/sponsors/infotech.png",
+                "info": "some info"
+            },
+            {
+                "name": "Propel",
+                "logo": "img/sponsors/propel.png",
+                "info": "some info"
+            }      
+        ],
+        "silver":[
+            {
+                "name": "City Wide Software Solutions",
+                "logo": "img/sponsors/citywide.png",
+                "info": "some info"
+            },
+            {
+                "name": "London Economic Development Corporation",
+                "logo": "img/sponsors/ledc.png",
+                "info": "some info"
+            },
+            {
+                "name": "Magnet Forensics",
+                "logo": "img/sponsors/magnet.png",
+                "info": "some info"
+            },
+            {
+                "name": "Ontario Centres of Excellence",
+                "logo": "img/sponsors/oce.png",
+                "info": "some info"
+            },
+            {
+                "name": "Ontario Network of Entrepreneurs",
+                "logo": "img/sponsors/one.png",
+                "info": "some info"
+            },
+            {
+                "name": "Shopify",
+                "logo": "img/sponsors/shopify.png",
+                "info": "some info"
+            },
+            {
+                "name": "pwc",
+                "logo": "img/sponsors/pwc.png",
+                "info": "some info"
+            },
+            {
+                "name": "rhinoactive",
+                "logo": "img/sponsors/redrhino.png",
+                "info": "some info"
+            }
+        ],
+        "bronze":[
+            {
+                "name": "Communitech",
+                "logo": "img/sponsors/communitech.png",
+                "info": "some info"
+            },
+            {
+                "name": "Race Roster",
+                "logo": "img/sponsors/raceroster.png",
+                "info": "some info"
+            },
+            {
+                "name": "SHARCNET",
+                "logo": "img/sponsors/sharcnet.png",
+                "info": "some info"
+            },
+            {
+                "name": "Particle",
+                "logo": "img/sponsors/particle.png",
+                "info": "some info"
+            },
+            {
+                "name": "Strategyzer",
+                "logo": "img/sponsors/strategyzer.png",
+                "info": "some info"
+            },
+            {
+                "name": "Wolfram Alpha",
+                "logo": "img/sponsors/wolfram.png",
+                "info": "some info"
+            },
+            {
+                "name": "goviral",
+                "logo": "img/sponsors/goviral.png",
+                "info": "some info"
+            },
+            {
+                "name": "Soylent",
+                "logo": "img/sponsors/soylent.png",
+                "info": "some info"
+            },
+            {
+                "name": "BITalino",
+                "logo": "img/sponsors/bitalino.png",
+                "info": "some info"
+            },
+            {
+                "name": "PLUX",
+                "logo": "img/sponsors/plux.png",
+                "info": "some info"
+            },
+            {
+                "name": "Green Brick Labs",
+                "logo": "img/sponsors/greenbricklabs.png",
+                "info": "some info"
+            },
+            {
+                "name": "StarTech",
+                "logo": "img/sponsors/startech.png",
+                "info": "some info"
+            },
+            {
+                "name": "Estimote",
+                "logo": "img/sponsors/estimote.png",
+                "info": "some info"
+            },
+            {
+                "name": "Engine SevenFour",
+                "logo": "img/sponsors/enginesevenfour.png",
+                "info": "some info"
+            },
+            {
+                "name": "Pebble",
+                "logo": "img/sponsors/pebble.png",
+                "info": "some info"
+            },
+            {
+                "name": "CDKGlobal",
+                "logo": "img/sponsors/cdk.png",
+                "info": "some info"
+            },
+            {
+                "name": "Github",
+                "logo": "img/sponsors/github.png",
+                "info": "some info"
+            },
+            {
+                "name": "Lani",
+                "logo": "img/sponsors/lani.png",
+                "info": "some info"
+            },
+            {
+                "name": "General Dynamics Land System-Canada",
+                "logo": "img/sponsors/glds.png",
+                "info": "some info"
+            },
+            {
+                "name": "Autodata",
+                "logo": "img/sponsors/autodata.png",
+                "info": "some info"
+            },
+            {
+                "name": "Thalmic Labs",
+                "logo": "img/sponsors/thalmic.png",
+                "info": "some info"
+            },
+            {
+                "name": "Google",
+                "logo": "img/sponsors/google.png",
+                "info": "some info"
+            },
+            {
+                "name": "Unilever",
+                "logo": "img/sponsors/unilever.png",
+                "info": "some info"
+            }
+        ]
+    }
+}
