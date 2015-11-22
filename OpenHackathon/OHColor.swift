@@ -12,8 +12,8 @@ import UIKit
 class OHColor: UIColor{
     
     // MARK: - Menu 
-    static var menuCellSelectedColor = HackWesternColor.deepPurple400
-    static var menuCellUnselectedColor = UIColor(white: 0.5, alpha: 1)
+    static var menuCellSelectedColor = UIColor(white: 0.80, alpha: 1)
+    static var menuCellUnselectedColor = UIColor(white: 0.9, alpha: 1)
     
     
     // MARK: - Navigation Bar

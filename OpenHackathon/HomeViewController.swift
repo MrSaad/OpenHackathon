@@ -18,9 +18,7 @@ class HomeViewController: UIViewController {
     //labels
     @IBOutlet weak var countdownClock: UILabel!
     @IBOutlet weak var timeLeftLabel: UILabel!
-    @IBOutlet weak var recentUpdatesLabel: UILabel!
-    @IBOutlet weak var recentUpdatesText: UITextView!
-    
+    @IBOutlet weak var complimentsLabel: UILabel!
     
     //timer
     var timer: NSTimer!
@@ -57,23 +55,22 @@ class HomeViewController: UIViewController {
         timeLeftLabel.textColor = UIColor.lightGrayColor()
         timeLeftLabel.font = UIFont(name: "Helvetica", size: 14)
         
-        //format recent updates label
-        recentUpdatesLabel.text = "Recent Updates"
-        recentUpdatesLabel.textColor = UIColor.whiteColor()
-        recentUpdatesText.backgroundColor = UIColor.blackColor()
-        recentUpdatesText.textColor = UIColor.lightGrayColor()
+        //format compliments label
+        complimentsLabel.textColor = UIColor.whiteColor()
+        complimentsLabel.text = "..."
         
     }
 
-    override func viewDidAppear(animated: Bool) {
-        recentUpdatesText.scrollRangeToVisible(NSRange(location:0, length:0))
-    }
-    
     //update the the countdown timer
     func updateTime(){
-        if(HackathonInfo.timeLeft.time <= 0){ countdownClock.text = "00:00:00" }
-        else{ countdownClock.text = HackathonInfo.timeLeft.hrMinSecForm }
+        
+        //set countdown text and color
+        countdownClock.text = HackathonInfo.timeLeft.hrMinSecForm
         countdownClock.textColor = timeLeftColor()
+        
+        //set compliments
+        let theHour = "\(HackathonInfo.timeLeft.hrStr)"
+        complimentsLabel.text = complimentsJSON[theHour].stringValue
     }
     
     //adjust colour of timer based on how much time is left

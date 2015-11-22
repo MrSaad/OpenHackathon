@@ -48,6 +48,8 @@
 		93A5555E1B96C4F800F81812 /* SponsorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */; };
 		93A555601B96C56C00F81812 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5555F1B96C56C00F81812 /* Sponsor.swift */; };
 		93A555641B97BB5600F81812 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */; };
+		93C51E931C01AC90008A4842 /* compliments.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C51E921C01AC90008A4842 /* compliments.json */; };
+		93F7F3E21C0118FA00D0F339 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F7F3E11C0118FA00D0F339 /* MentorsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsTableViewController.swift; sourceTree = "<group>"; };
 		93A5555F1B96C56C00F81812 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		93C51E921C01AC90008A4842 /* compliments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compliments.json; sourceTree = "<group>"; };
+		93F7F3E11C0118FA00D0F339 /* MentorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		AD9535A9D467B82A25C7647E /* Pods_OpenHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9DBBA3AAD98363803E7EA8 /* Pods-OpenHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenHackathon/Pods-OpenHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +185,7 @@
 				934DFF2C1B85327600F93769 /* Schedule */,
 				934DFF2D1B85328000F93769 /* Updates */,
 				934DFF2E1B85328800F93769 /* Maps */,
+				93F7F3E01C0118DE00D0F339 /* Mentors */,
 				934DFF2F1B85328F00F93769 /* Sponsors */,
 				930092EA1B7ACFD20008206C /* Main.storyboard */,
 				930093081B7BF3C20008206C /* OHColor.swift */,
@@ -223,6 +228,7 @@
 		9300930C1B7BFEBE0008206C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				93C51E921C01AC90008A4842 /* compliments.json */,
 				9300930D1B7BFECE0008206C /* HomeViewController.swift */,
 			);
 			name = Home;
@@ -318,6 +324,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		93F7F3E01C0118DE00D0F339 /* Mentors */ = {
+			isa = PBXGroup;
+			children = (
+				93F7F3E11C0118FA00D0F339 /* MentorsViewController.swift */,
+			);
+			name = Mentors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +424,7 @@
 				930092EC1B7ACFD20008206C /* Main.storyboard in Resources */,
 				930092F11B7ACFD20008206C /* LaunchScreen.xib in Resources */,
 				930092EE1B7ACFD20008206C /* Images.xcassets in Resources */,
+				93C51E931C01AC90008A4842 /* compliments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +495,7 @@
 				93A5555C1B96978C00F81812 /* OHTime.swift in Sources */,
 				931AF5CB1BF05257002606F6 /* ScheduleItem.swift in Sources */,
 				9347E9F91BEF42F4007213F0 /* MenuTableViewController.swift in Sources */,
+				93F7F3E21C0118FA00D0F339 /* MentorsViewController.swift in Sources */,
 				93A555521B96711A00F81812 /* UpdateTableViewCell.swift in Sources */,
 				93A555561B968D6000F81812 /* MapsContentViewController.swift in Sources */,
 				9347E9F71BEF415A007213F0 /* SWRevealViewController.m in Sources */,

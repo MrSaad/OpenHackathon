@@ -13,13 +13,15 @@ class MenuTableViewController: UITableViewController {
 //    @IBOutlet var cells: [UITableViewCell]!
     
     //titles
-    let titles = ["Home", "Schedule", "Updates", "Maps", "Sponsors"]
+    let titles = ["Home", "Schedule", "Updates", "Maps", "Mentors", "Sponsors"]
     
     //image handles
-    let imageHandles = ["home", "schedule", "updates", "maps", "sponsors"]
+    let imageHandles = ["home", "schedule", "updates", "maps", "mentors", "sponsors"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         
         //format nav bar colour
@@ -30,6 +32,10 @@ class MenuTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : OHColor.navBarTextColor]
         //format nav bar title
         self.navigationItem.title = "Navigation"
+        
+//        view.backgroundColor = UIColor(red: 128/255, green: 127/255, blue: 131/255, alpha: 1)
+        view.backgroundColor = OHColor.menuCellUnselectedColor
+        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -44,8 +50,11 @@ class MenuTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuTableViewCell
         
         //set titles and images
+        cell.backgroundColor = UIColor.whiteColor()
         cell.titleLabel.text = titles[indexPath.row]
         cell.iconImage.image = UIImage(named: imageHandles[indexPath.row])
+        cell.iconImage.image = cell.iconImage.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
     
         return cell
 
@@ -53,11 +62,17 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
+        var currCell = cell as! MenuTableViewCell
+        
         if HackathonInfo.currentPageInView == Page(rawValue: indexPath.row){
-            cell.backgroundColor = OHColor.menuCellSelectedColor
+            currCell.backgroundColor = OHColor.menuCellSelectedColor
+            currCell.iconImage.tintColor = HackWesternColor.deepPurple500
+            currCell.titleLabel.textColor = HackWesternColor.deepPurple500
         }
         else{
             cell.backgroundColor = OHColor.menuCellUnselectedColor
+            currCell.iconImage.tintColor = HackWesternColor.darkGrayColor()
+            currCell.titleLabel.textColor = HackWesternColor.darkGrayColor()
         }
     }
     
@@ -74,7 +89,8 @@ class MenuTableViewController: UITableViewController {
         case 1: performSegueWithIdentifier("showScheduleSegue", sender: self)
         case 2: performSegueWithIdentifier("showUpdatesSegue", sender: self)
         case 3: performSegueWithIdentifier("showMapsSegue", sender: self)
-        case 4: performSegueWithIdentifier("showSponsorsSegue", sender: self)
+        case 4: performSegueWithIdentifier("showMentorsSegue", sender: self)
+        case 5: performSegueWithIdentifier("showSponsorsSegue", sender: self)
         default: break;
         }
         

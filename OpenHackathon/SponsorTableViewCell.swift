@@ -9,6 +9,8 @@
 import UIKit
 
 class SponsorTableViewCell: UITableViewCell {
+    
+    @IBOutlet var imageViews: [UIImageView]!
 
     override func awakeFromNib() {
         super.awakeFromNib()

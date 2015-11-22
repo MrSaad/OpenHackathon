@@ -54,7 +54,7 @@ class ScheduleTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scheduleJSON["schedule"][days[section]].count
+        return scheduleJSON[days[section]].count
     }
 
     
@@ -72,7 +72,7 @@ class ScheduleTableViewController: UITableViewController {
         cell.tag = indexPath.row
         
         //get schedule item
-        let schedItem = scheduleJSON["schedule"][days[indexPath.section]][indexPath.row]
+        let schedItem = scheduleJSON[days[indexPath.section]][indexPath.row]
                 
         //get date for schedule item
         let dateFormatter = NSDateFormatter()

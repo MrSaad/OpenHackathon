@@ -1,5 +1,12 @@
 {
     "sponsors":{
+        "platinum":[
+            {
+                "name": "sponsor1",
+                "logo": "kik",
+                "info": "some info"
+            }
+        ],
         "gold":[
             {
                 "name": "sponsor1",
