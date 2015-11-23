@@ -24,11 +24,21 @@ class MapsContentViewController: UIViewController {
 
         self.imageView.image = UIImage(named: self.imageFile)
         self.titleLabel.text = self.titleText
+        
+        //set tap gestures on images
+        imageView.userInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: "imageTapped:")
+        tapGesture.numberOfTapsRequired = 1
+        imageView.addGestureRecognizer(tapGesture)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func imageTapped(tapGesture: UITapGestureRecognizer) {
+        let infoImage = JTSImageInfo()
+        infoImage.image = imageView.image!
+        infoImage.referenceRect = imageView.frame
+        infoImage.referenceView = imageView.superview
+        let imageViewController = JTSImageViewController(imageInfo: infoImage, mode: JTSImageViewControllerMode.Image, backgroundStyle: JTSImageViewControllerBackgroundOptions.Scaled)
+        imageViewController.showFromViewController(self, transition: JTSImageViewControllerTransition.FromOriginalPosition)
     }
     
 

@@ -19,6 +19,15 @@
 		931AF5CB1BF05257002606F6 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AF5CA1BF05257002606F6 /* ScheduleItem.swift */; };
 		931AF5CD1BF088D5002606F6 /* schedule_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 931AF5CC1BF088D5002606F6 /* schedule_info.json */; };
 		931AF5CF1BF177D7002606F6 /* notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = 931AF5CE1BF177D7002606F6 /* notifications.json */; };
+		932CD6921C02F63F001BDEFA /* SponsorData.json in Resources */ = {isa = PBXBuildFile; fileRef = 932CD6911C02F63F001BDEFA /* SponsorData.json */; };
+		932CD6941C02F7D6001BDEFA /* compliments.json in Resources */ = {isa = PBXBuildFile; fileRef = 932CD6931C02F7D6001BDEFA /* compliments.json */; };
+		932CD6A21C030B1B001BDEFA /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 932CD6971C030B1B001BDEFA /* JTSAnimatedGIFUtility.m */; };
+		932CD6A31C030B1B001BDEFA /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 932CD6991C030B1B001BDEFA /* JTSImageInfo.m */; };
+		932CD6A41C030B1B001BDEFA /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932CD69B1C030B1B001BDEFA /* JTSImageViewController.m */; };
+		932CD6A51C030B1B001BDEFA /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 932CD69D1C030B1B001BDEFA /* JTSSimpleImageDownloader.m */; };
+		932CD6A61C030B1B001BDEFA /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932CD69F1C030B1B001BDEFA /* UIApplication+JTSImageViewController.m */; };
+		932CD6A71C030B1B001BDEFA /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 932CD6A11C030B1B001BDEFA /* UIImage+JTSImageEffects.m */; };
+		932CD6AA1C031D8C001BDEFA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CD6A91C031D8C001BDEFA /* InfoViewController.swift */; };
 		9347E9F71BEF415A007213F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9347E9F61BEF415A007213F0 /* SWRevealViewController.m */; };
 		9347E9F91BEF42F4007213F0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347E9F81BEF42F4007213F0 /* MenuTableViewController.swift */; };
 		9347E9FC1BF01BD9007213F0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347E9FB1BF01BD9007213F0 /* MenuTableViewCell.swift */; };
@@ -39,7 +48,6 @@
 		935A55191BDF37C200A123DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935A55181BDF37C200A123DD /* SystemConfiguration.framework */; };
 		935A551B1BDF37CD00A123DD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 935A551A1BDF37CD00A123DD /* libz.tbd */; };
 		935A551D1BDF37D600A123DD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 935A551C1BDF37D600A123DD /* libsqlite3.tbd */; };
-		939E632B1BE2E65100E52D9D /* SponsorData.json in Resources */ = {isa = PBXBuildFile; fileRef = 939E63291BE2E42E00E52D9D /* SponsorData.json */; };
 		93A555521B96711A00F81812 /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555511B96711A00F81812 /* UpdateTableViewCell.swift */; };
 		93A555541B96714900F81812 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555531B96714900F81812 /* Update.swift */; };
 		93A555561B968D6000F81812 /* MapsContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555551B968D6000F81812 /* MapsContentViewController.swift */; };
@@ -48,7 +56,7 @@
 		93A5555E1B96C4F800F81812 /* SponsorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */; };
 		93A555601B96C56C00F81812 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A5555F1B96C56C00F81812 /* Sponsor.swift */; };
 		93A555641B97BB5600F81812 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */; };
-		93C51E931C01AC90008A4842 /* compliments.json in Resources */ = {isa = PBXBuildFile; fileRef = 93C51E921C01AC90008A4842 /* compliments.json */; };
+		93ACA0A21C01F84900A35456 /* SponsorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ACA0A11C01F84900A35456 /* SponsorInfoViewController.swift */; };
 		93F7F3E21C0118FA00D0F339 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F7F3E11C0118FA00D0F339 /* MentorsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +87,21 @@
 		931AF5CA1BF05257002606F6 /* ScheduleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
 		931AF5CC1BF088D5002606F6 /* schedule_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schedule_info.json; sourceTree = "<group>"; };
 		931AF5CE1BF177D7002606F6 /* notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notifications.json; sourceTree = "<group>"; };
+		932CD6911C02F63F001BDEFA /* SponsorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorData.json; sourceTree = "<group>"; };
+		932CD6931C02F7D6001BDEFA /* compliments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compliments.json; sourceTree = "<group>"; };
+		932CD6961C030B1B001BDEFA /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		932CD6971C030B1B001BDEFA /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		932CD6981C030B1B001BDEFA /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		932CD6991C030B1B001BDEFA /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		932CD69A1C030B1B001BDEFA /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		932CD69B1C030B1B001BDEFA /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		932CD69C1C030B1B001BDEFA /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		932CD69D1C030B1B001BDEFA /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		932CD69E1C030B1B001BDEFA /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		932CD69F1C030B1B001BDEFA /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		932CD6A01C030B1B001BDEFA /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		932CD6A11C030B1B001BDEFA /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		932CD6A91C031D8C001BDEFA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9347E9F41BEF415A007213F0 /* OpenHackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenHackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		9347E9F51BEF415A007213F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		9347E9F61BEF415A007213F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -101,7 +124,6 @@
 		935A55181BDF37C200A123DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		935A551A1BDF37CD00A123DD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		935A551C1BDF37D600A123DD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		939E63291BE2E42E00E52D9D /* SponsorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorData.json; sourceTree = "<group>"; };
 		93A555511B96711A00F81812 /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		93A555531B96714900F81812 /* Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		93A555551B968D6000F81812 /* MapsContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsContentViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +132,7 @@
 		93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsTableViewController.swift; sourceTree = "<group>"; };
 		93A5555F1B96C56C00F81812 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		93A555631B97BB5600F81812 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
-		93C51E921C01AC90008A4842 /* compliments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = compliments.json; sourceTree = "<group>"; };
+		93ACA0A11C01F84900A35456 /* SponsorInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorInfoViewController.swift; sourceTree = "<group>"; };
 		93F7F3E11C0118FA00D0F339 /* MentorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		AD9535A9D467B82A25C7647E /* Pods_OpenHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9DBBA3AAD98363803E7EA8 /* Pods-OpenHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenHackathon/Pods-OpenHackathon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +209,7 @@
 				934DFF2E1B85328800F93769 /* Maps */,
 				93F7F3E01C0118DE00D0F339 /* Mentors */,
 				934DFF2F1B85328F00F93769 /* Sponsors */,
+				932CD6A81C031D3A001BDEFA /* Info */,
 				930092EA1B7ACFD20008206C /* Main.storyboard */,
 				930093081B7BF3C20008206C /* OHColor.swift */,
 				93A5555B1B96978C00F81812 /* OHTime.swift */,
@@ -228,8 +251,8 @@
 		9300930C1B7BFEBE0008206C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				93C51E921C01AC90008A4842 /* compliments.json */,
 				9300930D1B7BFECE0008206C /* HomeViewController.swift */,
+				932CD6931C02F7D6001BDEFA /* compliments.json */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -237,9 +260,38 @@
 		931AF5C91BF05157002606F6 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				932CD6951C030B0D001BDEFA /* JTSImage */,
+				9347E9F41BEF415A007213F0 /* OpenHackathon-Bridging-Header.h */,
 				9347E9F31BEF414C007213F0 /* SWRevealViewController */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		932CD6951C030B0D001BDEFA /* JTSImage */ = {
+			isa = PBXGroup;
+			children = (
+				932CD6961C030B1B001BDEFA /* JTSAnimatedGIFUtility.h */,
+				932CD6971C030B1B001BDEFA /* JTSAnimatedGIFUtility.m */,
+				932CD6981C030B1B001BDEFA /* JTSImageInfo.h */,
+				932CD6991C030B1B001BDEFA /* JTSImageInfo.m */,
+				932CD69A1C030B1B001BDEFA /* JTSImageViewController.h */,
+				932CD69B1C030B1B001BDEFA /* JTSImageViewController.m */,
+				932CD69C1C030B1B001BDEFA /* JTSSimpleImageDownloader.h */,
+				932CD69D1C030B1B001BDEFA /* JTSSimpleImageDownloader.m */,
+				932CD69E1C030B1B001BDEFA /* UIApplication+JTSImageViewController.h */,
+				932CD69F1C030B1B001BDEFA /* UIApplication+JTSImageViewController.m */,
+				932CD6A01C030B1B001BDEFA /* UIImage+JTSImageEffects.h */,
+				932CD6A11C030B1B001BDEFA /* UIImage+JTSImageEffects.m */,
+			);
+			name = JTSImage;
+			sourceTree = "<group>";
+		};
+		932CD6A81C031D3A001BDEFA /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				932CD6A91C031D8C001BDEFA /* InfoViewController.swift */,
+			);
+			name = Info;
 			sourceTree = "<group>";
 		};
 		9347E9F31BEF414C007213F0 /* SWRevealViewController */ = {
@@ -247,7 +299,6 @@
 			children = (
 				9347E9F51BEF415A007213F0 /* SWRevealViewController.h */,
 				9347E9F61BEF415A007213F0 /* SWRevealViewController.m */,
-				9347E9F41BEF415A007213F0 /* OpenHackathon-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
 			sourceTree = "<group>";
@@ -298,8 +349,9 @@
 			children = (
 				93A5555D1B96C4F800F81812 /* SponsorsTableViewController.swift */,
 				935A55031BDEF37200A123DD /* SponsorTableViewCell.swift */,
+				93ACA0A11C01F84900A35456 /* SponsorInfoViewController.swift */,
 				93A5555F1B96C56C00F81812 /* Sponsor.swift */,
-				939E63291BE2E42E00E52D9D /* SponsorData.json */,
+				932CD6911C02F63F001BDEFA /* SponsorData.json */,
 			);
 			name = Sponsors;
 			sourceTree = "<group>";
@@ -386,6 +438,14 @@
 					930092E01B7ACFD20008206C = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = CF6QY4XVP9;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					930092F51B7ACFD20008206C = {
 						CreatedOnToolsVersion = 6.4;
@@ -418,13 +478,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939E632B1BE2E65100E52D9D /* SponsorData.json in Resources */,
 				931AF5CD1BF088D5002606F6 /* schedule_info.json in Resources */,
 				931AF5CF1BF177D7002606F6 /* notifications.json in Resources */,
 				930092EC1B7ACFD20008206C /* Main.storyboard in Resources */,
 				930092F11B7ACFD20008206C /* LaunchScreen.xib in Resources */,
 				930092EE1B7ACFD20008206C /* Images.xcassets in Resources */,
-				93C51E931C01AC90008A4842 /* compliments.json in Resources */,
+				932CD6921C02F63F001BDEFA /* SponsorData.json in Resources */,
+				932CD6941C02F7D6001BDEFA /* compliments.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,17 +554,25 @@
 				934DFF351B8533A700F93769 /* UpdatesTableViewController.swift in Sources */,
 				93A5555C1B96978C00F81812 /* OHTime.swift in Sources */,
 				931AF5CB1BF05257002606F6 /* ScheduleItem.swift in Sources */,
+				932CD6AA1C031D8C001BDEFA /* InfoViewController.swift in Sources */,
 				9347E9F91BEF42F4007213F0 /* MenuTableViewController.swift in Sources */,
+				932CD6A31C030B1B001BDEFA /* JTSImageInfo.m in Sources */,
+				93ACA0A21C01F84900A35456 /* SponsorInfoViewController.swift in Sources */,
 				93F7F3E21C0118FA00D0F339 /* MentorsViewController.swift in Sources */,
 				93A555521B96711A00F81812 /* UpdateTableViewCell.swift in Sources */,
+				932CD6A21C030B1B001BDEFA /* JTSAnimatedGIFUtility.m in Sources */,
 				93A555561B968D6000F81812 /* MapsContentViewController.swift in Sources */,
 				9347E9F71BEF415A007213F0 /* SWRevealViewController.m in Sources */,
 				93A555541B96714900F81812 /* Update.swift in Sources */,
+				932CD6A61C030B1B001BDEFA /* UIApplication+JTSImageViewController.m in Sources */,
 				934DFF311B8532DB00F93769 /* ScheduleTableViewController.swift in Sources */,
+				932CD6A71C030B1B001BDEFA /* UIImage+JTSImageEffects.m in Sources */,
+				932CD6A51C030B1B001BDEFA /* JTSSimpleImageDownloader.m in Sources */,
 				9300930E1B7BFECE0008206C /* HomeViewController.swift in Sources */,
 				9350A6F71BFD5A4F00F6945C /* UpdateViewController.swift in Sources */,
 				934DFF331B85339400F93769 /* MapsViewController.swift in Sources */,
 				935A55041BDEF37200A123DD /* SponsorTableViewCell.swift in Sources */,
+				932CD6A41C030B1B001BDEFA /* JTSImageViewController.m in Sources */,
 				930092E71B7ACFD20008206C /* AppDelegate.swift in Sources */,
 				9347E9FC1BF01BD9007213F0 /* MenuTableViewCell.swift in Sources */,
 				93A555641B97BB5600F81812 /* ScheduleTableViewCell.swift in Sources */,
@@ -570,8 +638,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: Saad.OpenHackathon";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: Saad.OpenHackathon";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -617,8 +685,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: Saad.OpenHackathon";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: Saad.OpenHackathon";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Saad Ahmed (CF6QY4XVP9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Saad Ahmed (CF6QY4XVP9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -633,6 +701,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -645,8 +714,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Saad Ahmed (75GGPSCAVX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Saad Ahmed (75GGPSCAVX)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -656,6 +725,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Saad.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenHackathon/OpenHackathon-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -667,8 +737,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Saad Ahmed (CF6QY4XVP9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Saad Ahmed (CF6QY4XVP9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -678,6 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Saad.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenHackathon/OpenHackathon-Bridging-Header.h";
 			};
 			name = Release;

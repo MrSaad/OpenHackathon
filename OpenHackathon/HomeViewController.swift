@@ -66,45 +66,47 @@ class HomeViewController: UIViewController {
         
         //set countdown text and color
         countdownClock.text = HackathonInfo.timeLeft.hrMinSecForm
-        countdownClock.textColor = timeLeftColor()
+        countdownClock.textColor = HackWesternColor.deepPurple100
         
         //set compliments
         let theHour = "\(HackathonInfo.timeLeft.hrStr)"
-        complimentsLabel.text = complimentsJSON[theHour].stringValue
+        if(HackathonInfo.timeLeft.time < 34.5*3600){
+            complimentsLabel.text = complimentsJSON[theHour].stringValue
+        }
     }
     
     //adjust colour of timer based on how much time is left
-    func timeLeftColor() -> UIColor{
-        
-        let timeLeft = HackathonInfo.timeLeft.time
-        
-        var myRed: CGFloat = 0
-        var myGreen: CGFloat = 0
-        let myBlue: CGFloat = 0
-        
-        //keep green if over 36 hours
-        if timeLeft > 36 * 3600{
-            myRed = 0
-            myGreen = 1
-        }
-        //change from green to yellow in first half
-        else if timeLeft <= 36 * 3600 && timeLeft > 18 * 3600{
-            myRed = 1 - CGFloat((timeLeft-18*3600)/(18*3600))
-            myGreen = 1
-        }
-        //change from yellow to red in second half
-        else if timeLeft <= 18 * 3600 && timeLeft > 0{
-            myGreen = CGFloat(timeLeft/(18*3600))
-            myRed = 1
-        }
-        //keep red if less than 0
-        else{
-            myRed = 1
-            myGreen = 0
-        }
-        
-        return UIColor(red: myRed, green: myGreen, blue: myBlue, alpha: 1)
-    }
+//    func timeLeftColor() -> UIColor{
+//        
+//        let timeLeft = HackathonInfo.timeLeft.time
+//        
+//        var myRed: CGFloat = 0
+//        var myGreen: CGFloat = 0
+//        let myBlue: CGFloat = 0
+//        
+//        //keep green if over 36 hours
+//        if timeLeft > 34.5 * 3600{
+//            myRed = 0
+//            myGreen = 1
+//        }
+//        //change from green to yellow in first half
+//        else if timeLeft <= 34.5 * 3600 && timeLeft > 18 * 3600{
+//            myRed = 1 - CGFloat((timeLeft-18*3600)/(18*3600))
+//            myGreen = 1
+//        }
+//        //change from yellow to red in second half
+//        else if timeLeft <= 18 * 3600 && timeLeft > 0{
+//            myGreen = CGFloat(timeLeft/(18*3600))
+//            myRed = 1
+//        }
+//        //keep red if less than 0
+//        else{
+//            myRed = 1
+//            myGreen = 0
+//        }
+//        
+//        return UIColor(red: myRed, green: myGreen, blue: myBlue, alpha: 1)
+//    }
     
     func addReminder() {
         // Create reminder by setting a local notification

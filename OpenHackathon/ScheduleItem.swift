@@ -27,16 +27,16 @@ class ScheduleItem{
         self.location = location
         self.toNotify = toNotify
         
-        localNotification = UILocalNotification()
-        localNotification.alertTitle = "Hackwestern Notification"
-        localNotification.alertBody = title+" in 5 minutes!"
-        localNotification.alertAction = "ShowDetails"
+//        localNotification = UILocalNotification()
+//        localNotification.alertTitle = "Hackwestern Notification"
+//        localNotification.alertBody = title+" in 5 minutes!"
+//        localNotification.alertAction = "ShowDetails"
 //        localNotification.fireDate = date.dateByAddingTimeInterval(-60*5)
-        localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.soundName = UILocalNotificationDefaultSoundName
-        localNotification.applicationIconBadgeNumber = 1
-        localNotification.category = "reminderCategory"
-        localNotification.userInfo = ["uid": title]
+//        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+//        localNotification.soundName = UILocalNotificationDefaultSoundName
+//        localNotification.applicationIconBadgeNumber = 1
+//        localNotification.category = "reminderCategory"
+//        localNotification.userInfo = ["uid": title]
     }
     
     func getDate() -> String{

@@ -14,7 +14,7 @@ class ScheduleTableViewController: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     //possible days
-    let days = ["November 10, 2015", "November 11, 2015", "November 12, 2015"]
+    let days = ["November 27, 2015", "November 28, 2015", "November 29, 2015"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,8 @@ class ScheduleTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : OHColor.navBarTextColor]
         //format nav bar title
         self.navigationItem.title = "Schedule"
+        
+        
         
     }
     
@@ -80,17 +82,17 @@ class ScheduleTableViewController: UITableViewController {
         let date = dateFormatter.dateFromString(days[indexPath.section]+" "+schedItem["time"].stringValue)!
         
         //set cell's sched item
-        cell.scheduleItem = ScheduleItem(title: schedItem["title"].stringValue, info: schedItem["info"].stringValue, date: date, location: schedItem["location"].stringValue, toNotify: notifDict[schedItem["title"].stringValue]!)
+        cell.scheduleItem = ScheduleItem(title: schedItem["title"].stringValue, info: schedItem["info"].stringValue, date: date, location: schedItem["location"].stringValue, toNotify: false)
         cell.populate()
         
-        if(cell.scheduleItem.toNotify == false){
-            cell.addScheduleButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
-            cell.addScheduleButton.setTitle("+ Remind Me", forState: .Normal)
-        }
-        else{
-            cell.addScheduleButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-            cell.addScheduleButton.setTitle("+ Remove From Reminders", forState: .Normal)
-        }
+//        if(cell.scheduleItem.toNotify == false){
+//            cell.addScheduleButton.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+//            cell.addScheduleButton.setTitle("+ Remind Me", forState: .Normal)
+//        }
+//        else{
+//            cell.addScheduleButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
+//            cell.addScheduleButton.setTitle("+ Remove From Reminders", forState: .Normal)
+//        }
         
 
         return cell
@@ -99,6 +101,10 @@ class ScheduleTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return days[section]
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 150
     }
 
 

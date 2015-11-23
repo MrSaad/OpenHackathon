@@ -3,3 +3,5 @@
 //
 
 #import "SWRevealViewController.h"
+#import "JTSImageViewController.h"
+#import "JTSImageInfo.h"

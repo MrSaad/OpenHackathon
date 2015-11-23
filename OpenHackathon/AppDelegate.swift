@@ -22,46 +22,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(nil, forKey: "schedule_stored_data")
-        defaults.setObject(nil, forKey: "notif_stored_data")
-        if(defaults.objectForKey("schedule_stored_data") == nil){
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        defaults.setObject(nil, forKey: "schedule_stored_data")
+//        defaults.setObject(nil, forKey: "notif_stored_data")
+//        if(defaults.objectForKey("schedule_stored_data") == nil){
+        
+        //set status bar
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        //load compliments
+        var path = NSBundle.mainBundle().pathForResource("compliments", ofType: "json")!
+        var data = NSData(contentsOfFile: path)!
+        complimentsJSON = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
             
-            //load compliments
-            var path = NSBundle.mainBundle().pathForResource("compliments", ofType: "json")!
-            var data = NSData(contentsOfFile: path)!
-            complimentsJSON = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
-            
-            //load schedule
-            path = NSBundle.mainBundle().pathForResource("schedule_info", ofType: "json")!
-            data = NSData(contentsOfFile: path)!
-            scheduleJSON = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
-            defaults.setObject(scheduleJSON.rawString()!, forKey: "schedule_stored_data")
-            
+        //load schedule
+        path = NSBundle.mainBundle().pathForResource("schedule_info", ofType: "json")!
+        data = NSData(contentsOfFile: path)!
+        scheduleJSON = JSON(data: data, options: NSJSONReadingOptions.AllowFragments, error: nil)
+//        defaults.setObject(scheduleJSON.rawString()!, forKey: "schedule_stored_data")
+        
             //load notifications
-            path = NSBundle.mainBundle().pathForResource("notifications", ofType: "json")!
-            data = NSData(contentsOfFile: path)!
-            notifJSON = JSON(data: data)
-            defaults.setObject(notifJSON.rawString()!, forKey: "notif_stored_data")
-            
-            for (key, object) in notifJSON {
-                notifDict[key] = object.boolValue
-            }
-        }
-        else{
-            
-            //load schedule
-            var str = defaults.objectForKey("schedule_stored_data")
-            var dataFromStr = str!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-            scheduleJSON = JSON(data: dataFromStr)
-            
-            //load notifations
-            str = defaults.objectForKey("notif_stored_data")
-            dataFromStr = str!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-            notifJSON = JSON(data: dataFromStr)
-            notifDict = notifJSON.dictionaryObject as! [String: Bool]
-            
-        }
+//            path = NSBundle.mainBundle().pathForResource("notifications", ofType: "json")!
+//            data = NSData(contentsOfFile: path)!
+//            notifJSON = JSON(data: data)
+//            defaults.setObject(notifJSON.rawString()!, forKey: "notif_stored_data")
+//            
+//            for (key, object) in notifJSON {
+//                notifDict[key] = object.boolValue
+//            }
+//        }
+//        else{
+//            
+//            //load schedule
+//            var str = defaults.objectForKey("schedule_stored_data")
+//            var dataFromStr = str!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+//            scheduleJSON = JSON(data: dataFromStr)
+//            
+//            //load notifations
+//            str = defaults.objectForKey("notif_stored_data")
+//            dataFromStr = str!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+//            notifJSON = JSON(data: dataFromStr)
+//            notifDict = notifJSON.dictionaryObject as! [String: Bool]
+//            
+//        }
     
         
         Parse.setApplicationId("mboI7L7M7uPlSSdCBUPDCWQC3NLqDORPyPQyuOWE",

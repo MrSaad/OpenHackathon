@@ -23,7 +23,7 @@ class MenuTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         //format text
-        titleLabel.font = UIFont(name: "Helvetica", size: 20)
+        titleLabel.font = UIFont(name: "Helvetica", size: 16)
         
     }
 

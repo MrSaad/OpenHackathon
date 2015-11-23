@@ -13,15 +13,13 @@ class MenuTableViewController: UITableViewController {
 //    @IBOutlet var cells: [UITableViewCell]!
     
     //titles
-    let titles = ["Home", "Schedule", "Updates", "Maps", "Mentors", "Sponsors"]
+    let titles = ["Home", "Schedule", "Updates", "Maps", "Mentors", "Sponsors", "Info"]
     
     //image handles
-    let imageHandles = ["home", "schedule", "updates", "maps", "mentors", "sponsors"]
+    let imageHandles = ["home", "schedule", "updates", "maps", "mentors", "sponsors", "info"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         
         //format nav bar colour
@@ -62,7 +60,7 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
-        var currCell = cell as! MenuTableViewCell
+        let currCell = cell as! MenuTableViewCell
         
         if HackathonInfo.currentPageInView == Page(rawValue: indexPath.row){
             currCell.backgroundColor = OHColor.menuCellSelectedColor
@@ -91,9 +89,14 @@ class MenuTableViewController: UITableViewController {
         case 3: performSegueWithIdentifier("showMapsSegue", sender: self)
         case 4: performSegueWithIdentifier("showMentorsSegue", sender: self)
         case 5: performSegueWithIdentifier("showSponsorsSegue", sender: self)
+        case 6: performSegueWithIdentifier("showInfoSegue", sender: self)
         default: break;
         }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
+        return 50
     }
 
 }

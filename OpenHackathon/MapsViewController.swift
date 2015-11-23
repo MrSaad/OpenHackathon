@@ -37,8 +37,8 @@ class MapsViewController: UIViewController {
         self.navigationItem.title = "Maps"
         
         //set up the page view controller information
-        self.pageTitles = NSArray(objects: "Canada", "UWO", "Maze")
-        self.pageImages = NSArray(objects: "canada", "map", "maze")
+        self.pageTitles = NSArray(objects: "Floor 1", "Floor 2")
+        self.pageImages = NSArray(objects: "bf-ac-1", "bf-ac-2")
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MapsPageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         let startVC = self.viewControllerAtIndex(0) as MapsContentViewController
@@ -65,14 +65,12 @@ class MapsViewController: UIViewController {
         vc.imageFile = self.pageImages[index] as! String
         vc.titleText = self.pageTitles[index] as! String
         vc.pageIndex = index
+        
 
         return vc
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
 }
 
