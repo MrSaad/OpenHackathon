@@ -1,0 +1,57 @@
+{
+    "November 27, 2015":[
+        {
+            "title": "Registration Open",
+            "info": "Meet at main reception to register. Please have your ID ready",
+            "location": "Main Reception",
+            "time": "6:30 PM",
+            "notify": false
+        },
+        {
+            "title": "Title 12",
+            "info": "information for hello world",
+            "location": "Kresge Building",
+            "time": "8:00 PM",
+            "notify": false
+        },
+       {
+           "title": "Title 13",
+           "info": "information for hello world",
+           "location": "Kresge Building",
+           "time": "9:00 PM",
+           "notify": false
+       }
+    ],
+    "November 28, 2015":[
+        {
+            "title": "Title 21",
+            "info": "information for hello world",
+            "location": "Kresge Building",
+            "time": "7:00 PM",
+            "notify": false
+        },
+        {
+            "title": "Title 22",
+            "info": "information for hello world",
+            "location": "Kresge Building",
+            "time": "7:00 PM",
+            "notify": false
+        }
+    ],
+    "November 29, 2015":[
+        {
+            "title": "Title 31",
+            "info": "information for hello world",
+            "location": "Kresge Building",
+            "time": "7:00 PM",
+            "notify": false
+        },
+        {
+            "title": "Title 32",
+            "info": "information for hello world",
+            "location": "Kresge Building",
+            "time": "7:00 PM",
+            "notify": false
+        }
+    ]
+}
